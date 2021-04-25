@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 
 export const api_endpoint = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API}`;
-export const featured_movies = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API}&sort_by=popularity.desc&include_adult=false&include_video=true&page=1`;
+const featured_movies = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API}&sort_by=popularity.desc&include_adult=false&include_video=true&page=1`;
+const image_api = `https://image.tmdb.org/t/p/w500`;
 
 const AppContext = React.createContext();
 
@@ -9,8 +10,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
   const [movies, setMovies] = useState([]);
-  const [featuredMovies, setFeaturedMovies] = useState([]);
-  const [query, setQuery] = useState("test");
+  const [query, setQuery] = useState(null);
 
   const fetchMovies = async (url) => {
     setLoading(true);
@@ -31,19 +31,8 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  const fetchFeaturedMovies = async (url) => {
-    try {
-      const res = await fetch(url);
-      const featuredData = await res.json();
-      setFeaturedMovies(featuredData);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
     fetchMovies(`${api_endpoint}&query=${query}`);
-    fetchFeaturedMovies(featured_movies);
   }, [query]);
 
   return (
@@ -55,7 +44,8 @@ const AppProvider = ({ children }) => {
         query,
         setQuery,
         setMovies,
-        featuredMovies,
+        featured_movies,
+        image_api,
       }}
     >
       {children}

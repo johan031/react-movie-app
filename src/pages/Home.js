@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../Components/Hero";
-import MovieList from "../Components/MovieList";
+import FeaturedMovies from "../Components/FeaturedMovies";
 import SearchForm from "../Components/SearchForm";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
       <h1>Home page</h1>
       <Hero />
       <SearchForm />
-      <MovieList />
+      <FeaturedMovies />
     </div>
   );
 };
