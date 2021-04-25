@@ -17,7 +17,6 @@ const AppProvider = ({ children }) => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data);
 
       if (data.results.length > 1) {
         setMovies(data.results);
