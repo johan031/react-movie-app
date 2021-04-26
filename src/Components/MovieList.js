@@ -2,7 +2,11 @@ import React from "react";
 import { useGlobalContext } from "../context";
 
 const MovieList = () => {
-  const { movies } = useGlobalContext();
+  const { query, movies, setMovies } = useGlobalContext();
+
+  if (query === "") {
+    setMovies("");
+  }
 
   return (
     <div>

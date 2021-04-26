@@ -15,7 +15,7 @@ const SearchForm = () => {
         <h3>search</h3>
         <input type="text" onChange={(e) => setQuery(e.target.value)} />
       </form>
-      {/* <MovieList /> */}
+      <MovieList />
     </div>
   );
 };

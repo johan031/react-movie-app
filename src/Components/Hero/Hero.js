@@ -2,9 +2,11 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div>
-      <h2>hero</h2>
-    </div>
+    <section>
+      <div>
+        <h1>movie app</h1>
+      </div>
+    </section>
   );
 };
 

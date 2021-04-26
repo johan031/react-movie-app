@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
   const [movies, setMovies] = useState([]);
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState("");
 
   const fetchMovies = async (url) => {
     setLoading(true);
@@ -22,6 +22,7 @@ const AppProvider = ({ children }) => {
         setMovies(data.results);
         setError({ show: false, msg: "" });
       } else {
+        setMovies("");
         setError({ show: true, msg: "There is no movies!" });
         console.log("nema");
       }
@@ -32,7 +33,9 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchMovies(`${api_endpoint}&query=${query}`);
+    if (query != "") {
+      fetchMovies(`${api_endpoint}&query=${query}`);
+    }
   }, [query]);
 
   return (
