@@ -1,10 +1,14 @@
 import React from "react";
+import Navbar from "../Navbar";
+import SearchForm from "../SearchForm";
+import styles from "./hero.module.css";
 
 const Hero = () => {
   return (
-    <section>
+    <section className={styles.hero}>
       <div>
-        <h1>movie app</h1>
+        <Navbar />
+        <SearchForm />
       </div>
     </section>
   );
