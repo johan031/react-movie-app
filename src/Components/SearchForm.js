@@ -1,9 +1,9 @@
 import React from "react";
 import { useGlobalContext } from "../context";
-import MovieList from "./MovieList";
+import MovieList from "./List/MovieList";
 
 const SearchForm = () => {
-  const { query, setQuery, error } = useGlobalContext();
+  const { setQuery } = useGlobalContext();
 
   const movieSearch = (e) => {
     e.preventDefault();

@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../Components/Hero/Hero";
-import FeaturedMovies from "../Components/FeaturedMovies";
+import FeaturedMovies from "../Components/Featured/FeaturedMovies";
 
 const Home = () => {
   return (

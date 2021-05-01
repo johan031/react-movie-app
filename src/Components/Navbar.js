@@ -6,10 +6,10 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <Link to="/sdadasd">
-          <a>
+        <Link to="/">
+          <span>
             <AiOutlineHome />
-          </a>
+          </span>
         </Link>
       </div>
     </nav>

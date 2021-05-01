@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
 const Movie = ({
   id,
@@ -13,8 +13,7 @@ const Movie = ({
   const { image_api } = useGlobalContext();
 
   return (
-    <div>
-      <h4>{title}</h4>
+    <div className="featured-movie">
       <img src={`${image_api}/${poster}`} alt="" />
       <Link to={`/movie/${id}`}>details</Link>
     </div>

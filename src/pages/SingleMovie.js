@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 import { useGlobalContext } from "../context";
 
 // `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_API}&language=en-US` VIDEO API ENDPOINT
@@ -37,6 +38,7 @@ const SingleMovie = () => {
 
   return (
     <div>
+      <Navbar />
       <h1>{title}</h1>
       <p>{overview}</p>
       <div>
