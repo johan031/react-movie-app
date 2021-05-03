@@ -7,5 +7,33 @@
   margin-bottom: 5rem;
 }
 
-.hero__container {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2.5rem;
+}
+
+.hero_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18rem;
+}
+
+.hero_heading {
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+}
+
+.hero_api {
+  text-transform: capitalize;
+}
+
+.hero_api a {
+  color: #76ff06;
+  text-decoration: none;
 }

@@ -17,13 +17,12 @@ const FeaturedMovie = ({
   return (
     <div className={styles.item}>
       <Link className={styles.link} to={`/movie/${id}`}>
-        <AiOutlineSearch className={styles.search} />
+        <img
+          className={styles.image}
+          src={`${image_api}/${background}`}
+          alt={title}
+        />
       </Link>
-      <img
-        className={styles.image}
-        src={`${image_api}/${background}`}
-        alt={title}
-      />
       <div className={styles.item_info}>
         <h4 className={styles.title}>
           {title.length > 35 ? `${title.slice(0, 35)}...` : title}

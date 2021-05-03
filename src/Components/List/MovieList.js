@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
+import Movie from "./Movie";
+import styles from "./movieList.module.css";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -12,7 +13,7 @@ const MovieList = () => {
       const data = await res.json();
 
       if (data.results.length > 1) {
-        setMovies(data.results);
+        setMovies(data.results.slice(0, 10));
       } else {
         console.log("nema filmova");
       }
@@ -30,18 +31,10 @@ const MovieList = () => {
   }, [query]);
 
   return (
-    <div>
+    <div className={styles.list}>
       {movies &&
         movies.map((movie) => {
-          const { id, title, poster_path: poster } = movie;
-          return (
-            <div key={id}>
-              <h4>{title}</h4>
-              <span>
-                <Link to={`/movie/${id}`}>details</Link>
-              </span>
-            </div>
-          );
+          return <Movie key={movie.id} {...movie} />;
         })}
     </div>
   );

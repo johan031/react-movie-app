@@ -7,11 +7,16 @@ const FeaturedMovies = () => {
   const { movies } = useGlobalContext();
 
   return (
-    <section className={styles.container}>
-      {movies.length &&
-        movies.map((movie) => {
-          return <Movie key={movie.id} {...movie} />;
-        })}
+    <section>
+      <div className={styles.heading_box}>
+        <h2 className={styles.heading}>Popular Movies</h2>
+      </div>
+      <div className={styles.container}>
+        {movies.length &&
+          movies.map((movie) => {
+            return <Movie key={movie.id} {...movie} />;
+          })}
+      </div>
     </section>
   );
 };

@@ -1,0 +1,33 @@
+.list {
+  background-color: #222;
+}
+
+.item {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  background-color: #444;
+}
+
+.item_img {
+  width: 40px;
+  height: 100%;
+  margin-right: 0.5rem;
+}
+
+.item_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_title {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.item_date {
+  font-weight: 400;
+  font-size: 14px;
+}
