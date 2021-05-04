@@ -1,5 +1,6 @@
 .list {
   background-color: #222;
+  transition: all 0.3s ease-in;
 }
 
 .item {
@@ -30,4 +31,9 @@
 .item_date {
   font-weight: 400;
   font-size: 14px;
+}
+
+.error {
+  color: rgb(245, 75, 75);
+  font-weight: 400;
 }

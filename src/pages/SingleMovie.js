@@ -10,21 +10,47 @@ const SingleMovie = () => {
   const [movie, setMovie] = useState({});
   const { image_api } = useGlobalContext();
 
-  useEffect(() => {
-    const getMovie = async () => {
-      try {
-        const res = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API}&language=en-US&external_source=imdb_id`
-        );
-        const data = await res.json();
-        console.log(data);
+  const getMovie = async () => {
+    try {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API}&language=en-US&external_source=imdb_id`
+      );
+      const data = await res.json();
 
-        setMovie(data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+      setMovie(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getVideo = async () => {
+    try {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_API}&language=en-US`
+      );
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getImages = async () => {
+    try {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}/images?api_key=${process.env.REACT_APP_API}&language=en-US`
+      );
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
     getMovie();
+    getVideo();
+    getImages();
   }, []);
 
   const {

@@ -8,7 +8,6 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState({ show: false, msg: "" });
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -50,7 +49,6 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         loading,
-        error,
         movies,
         query,
         setQuery,

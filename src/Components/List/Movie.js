@@ -8,12 +8,16 @@ const Movie = ({ id, title, poster_path: poster, release_date: date }) => {
 
   return (
     <div className={styles.item}>
-      <Link to={`/movie/${id}`}>
-        <img
-          className={styles.item_img}
-          src={`${image_api}/${poster}`}
-          alt={title}
-        />
+      <Link to={`/movie/${id}`} target="__blank">
+        {poster ? (
+          <img
+            className={styles.item_img}
+            src={`${image_api}/${poster}`}
+            alt={title}
+          />
+        ) : (
+          ""
+        )}
       </Link>
       <div className="item_info">
         <h4 className={styles.item_title}>{title}</h4>
