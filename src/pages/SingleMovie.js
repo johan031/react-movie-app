@@ -88,7 +88,11 @@ const SingleMovie = () => {
             {genres &&
               genres.map((genre) => {
                 const { id, name } = genre;
-                return <span key={id}> {name} </span>;
+                return (
+                  <span key={id} className="signle-movie__genre">
+                    {name}{" "}
+                  </span>
+                );
               })}
           </div>
           <div></div>

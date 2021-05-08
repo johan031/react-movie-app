@@ -1,4 +1,11 @@
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
 .nav {
   color: #f7f7f7;
   font-size: 2rem;
+  margin-left: 2rem;
 }

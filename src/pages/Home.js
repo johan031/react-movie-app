@@ -4,7 +4,7 @@ import FeaturedMovies from "../Components/Featured/FeaturedMovies";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bodyContainer">
       <Hero />
       <FeaturedMovies />
     </div>

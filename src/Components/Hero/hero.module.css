@@ -12,11 +12,13 @@
   display: flex;
   justify-content: space-around;
   padding-top: 2.5rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero_box {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -27,6 +29,7 @@
   font-weight: 400;
   letter-spacing: 0.3rem;
   text-transform: capitalize;
+  z-index: 1;
 }
 
 .hero_api {

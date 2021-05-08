@@ -5,7 +5,7 @@ import styles from "./nav.module.css";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <Link to="/">
         <AiOutlineHome className={styles.nav} />
       </Link>

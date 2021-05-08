@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
-        <Navbar />
+        {/* <Navbar /> */}
         <SearchForm />
       </div>
       <div className={styles.hero_box}>
