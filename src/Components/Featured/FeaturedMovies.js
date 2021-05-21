@@ -12,7 +12,7 @@ const FeaturedMovies = () => {
         <h2 className={styles.heading}>Popular Movies</h2>
       </div>
       <div className={styles.container}>
-        {movies.length &&
+        {movies.length > 1 &&
           movies.map((movie) => {
             return <Movie key={movie.id} {...movie} />;
           })}

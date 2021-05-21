@@ -13,7 +13,7 @@ const MovieList = () => {
       const res = await fetch(url);
       const data = await res.json();
 
-      if (data.results.length) {
+      if (data.results.length > 1) {
         setMovies(data.results.slice(0, 10));
         setError({ show: false, msg: "" });
       } else {

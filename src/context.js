@@ -11,26 +11,6 @@ const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
 
-  // const fetchMovies = async (url) => {
-  //   setLoading(true);
-  //   try {
-  //     const res = await fetch(url);
-  //     const data = await res.json();
-
-  //     if (data.results.length > 1) {
-  //       setMovies(data.results);
-  //       setError({ show: false, msg: "" });
-  //     } else {
-  //       setMovies("");
-  //       setError({ show: true, msg: "There is no movies!" });
-  //       console.log("nema");
-  //     }
-  //     setLoading(false);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
   const fetchFeaturedMovies = async (url) => {
     try {
       const res = await fetch(url);
