@@ -8,8 +8,8 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  background: #222;
   color: #f7f7f7;
+  background-color: #333;
 }
 
 /* Single Movie Page CSS */
@@ -40,12 +40,20 @@ body {
 .signle-movie__genres {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 
 .signle-movie__genre {
   background-color: #53c213;
   padding: 0.2rem;
   margin-right: 0.2rem;
+}
+
+.signle-movie__rating {
+  display: flex;
+  align-items: center;
+  color: #53c213;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 800px) {

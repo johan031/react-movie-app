@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
+import { AiOutlineStar } from "react-icons/ai";
 import { useGlobalContext } from "../context";
 
 // `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_API}&language=en-US` VIDEO API ENDPOINT
@@ -95,10 +96,12 @@ const SingleMovie = () => {
                 );
               })}
           </div>
+          <span className="signle-movie__rating">
+            {rating}
+            <AiOutlineStar />
+          </span>
           <div></div>
-          <span className="signle-movie__rating">{rating}</span>
-          <div></div>
-          <span className="signle-movie__date">{date}</span>
+          <span className="signle-movie__date"> {date}</span>
         </div>
       </div>
     </section>
