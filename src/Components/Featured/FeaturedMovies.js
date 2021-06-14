@@ -5,7 +5,7 @@ import styles from "./featured.module.css";
 
 const FeaturedMovies = () => {
   const { movies } = useGlobalContext();
-  console.log(movies.length);
+  console.log(movies);
 
   return (
     <section>
@@ -13,7 +13,7 @@ const FeaturedMovies = () => {
         <h2 className={styles.heading}>Popular Movies</h2>
       </div>
       <div className={styles.container}>
-        {movies.length &&
+        {movies &&
           movies.map((movie) => {
             return <Movie key={movie.id} {...movie} />;
           })}
