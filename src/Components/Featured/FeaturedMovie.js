@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 import styles from "./featured.module.css";
-import { AiOutlineSearch, AiOutlineStar } from "react-icons/ai";
+import {  AiOutlineStar } from "react-icons/ai";
 
 const FeaturedMovie = ({
   id,
